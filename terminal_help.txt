@@ -1,0 +1,78 @@
+
+
+python -m venv venv
+
+venv\Scripts\activate
+
+(venv) C:\Users\weaar\Documents\codingtemple-kekambas-111\Week 6\Day 1\favorite_5>pip list
+Package    Version
+---------- -------
+pip        22.3.1 
+setuptools 65.5.0 
+
+[notice] A new release of pip available: 22.3.1 -> 23.0.1
+[notice] To update, run: python.exe -m pip install --upgrade pip
+
+(venv) C:\Users\weaar\Documents\codingtemple-kekambas-111\Week 6\Day 1\favorite_5>python.exe -m pip install --upgrade pip
+
+Successfully installed pip-23.0.1
+
+(venv) C:\Users\weaar\Documents\codingtemple-kekambas-111\Week 6\Day 1\favorite_5>pip install
+ERROR: You must give at least one requirement to install (see "pip help install")
+
+
+
+where python
+C:\Users\weaar\Documents\codingtemple-kekambas-111\Week 6\Day 1\favorite_5\venv\Scripts\python.exe
+C:\Users\weaar\AppData\Local\Programs\Python\Python310\python.exe
+C:\Users\weaar\AppData\Local\Microsoft\WindowsApps\python.exe
+
+(venv) C:\Users\weaar\Documents\codingtemple-kekambas-111\Week 6\Day 1\favorite_5>pip list                           
+Package    Version
+---------- -------
+pip        23.0.1
+setuptools 65.5.0
+
+(venv) C:\Users\weaar\Documents\codingtemple-kekambas-111\Week 6\Day 1\favorite_5>pip install flask
+
+Successfully installed Jinja2-3.1.2 MarkupSafe-2.1.2 Werkzeug-2.2.3 click-8.1.3 colorama-0.4.6 flask-2.2.3 itsdangerous-2.1.2
+
+(venv) C:\Users\weaar\Documents\codingtemple-kekambas-111\Week 6\Day 1\favorite_5>pip list
+Package      Version
+------------ -------
+click        8.1.3
+colorama     0.4.6
+Flask        2.2.3
+itsdangerous 2.1.2
+Jinja2       3.1.2
+pip          23.0.1
+setuptools   65.5.0
+Werkzeug     2.2.3
+
+(venv) C:\Users\weaar\Documents\codingtemple-kekambas-111\Week 6\Day 1\favorite_5>flask --app hello run 
+ * Serving Flask app 'hello'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.                                                                                          erver instead.
+ * Running on http://127.0.0.1:5000
+Press CTRL+C to quit
+127.0.0.1 - - [20/Mar/2023 17:38:40] "GET / HTTP/1.1" 200 -
+
+flask --debug run
+
+(venv) C:\Users\weaar\Documents\codingtemple-kekambas-111\Week 6\Day 1\favorite_5>pip freeze > requirements.txt
+
+
+take everything from app.py and add it to __init__.py (you have to make this)  
+
+then takes the two app.routes out and put them in a routes file within the pycache along with tht init.py and then at the top of the routes file put 
+
+# import all of the routes from the routes file into the current package(__init.py)
+from . import routes
+
+create a templates folder within the app folder (make sure its in the app folder or it will not run)
+
+
+
+
+
+from flask import render_template top of the routes.py
